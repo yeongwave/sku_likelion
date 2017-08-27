@@ -7,15 +7,26 @@
     width: 100%;
     height: 100vh;
 }
-
+// #main::after{
+//     content: '';
+//     position:absolute;
+//     top: 0; left:0; right:0; bottom:0;
+//     background: inherit;
+//     z-index:-1;
+//     filter: blur(6px);
+//     -webkit-filter: blur(6px);
+//     -moz-filter: blur(6px);
+//     -o-filter: blur(6px);    
+// }
 #main {
-    background-image: url(main.jpg);
+    position:relative;
+    z-index:1;
+    background-image: url(main2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     //background-attachment: fixed;
 }
-
 #about {
     background-image: url('sku-likelion-member.jpg');
     background-size: cover;
@@ -23,19 +34,23 @@
     background-position: center center;
     //background-attachment: fixed;
 }
-
-#member {
-    background-color: orange;
+.navbar-style {
+    padding: 0;
 }
-
-#gallery {
-    // background-color: black;
+.navbar-style > a {
+    margin-left: 1rem;
 }
-
-#sponsor {
-    // background-color: white;
+.nav-link {
+    font-weight: 400 !important;
 }
-
+.nav-link.active {
+    font-weight: 400 !important;
+    color: rgb(14, 91, 171) !important;
+}
+.nav-link:hover {
+    font-weight: 400 !important;
+    color: rgb(14, 91, 171) !important;
+}
 .main {
     padding-top: 100px;
 }
@@ -80,39 +95,67 @@
     box-shadow: 0 0 0 3px rgba(14, 91, 171, 0.5);
 }
 
+// modal CSS
+.modal-div * {
+    color:black;
+}
+.modal-btn {
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 1px solid #ffc107 !important;
+    color: #ffc107 !important;
+    font-weight: 300 !important;
+    margin-bottom: 0 !important;
+}
+.modal-btn:hover {
+    background-color: #ffc107 !important;
+    color: white !important;
+    border: 1px solid white !important;
+}
+.close-btn {
+    margin-bottom:0 !important;
+}
+.modal-footer {
+    justify-content: center;
+}
+.modal-body {
+    padding: 0;
+}
+.modal-body > img {
+    width: 100%;
+}
+
+// sponsor CSS
 .sponsor-sub-title {
     margin-right: 3rem !important;
     margin-left: 3rem !important;
 }
 
 .sponsor-img {
-    display: inline-block;
-    width: 320px;
-    margin: 30px;
-    //padding: 30px;
+    width:20%;
+    height:30%;
+    margin: 20px;
+}
+.service-img{
+    width:10%;
+    height:30%;
+    margin: 20px;
 }
 
 .sponsor-img-group {
-    text-align: center;
-    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
 }
-
-// .carousel{
-//   width: 1024px;
-// }
-
-// .item img{
-//   object-fit: cover;
-//   height: auto !important;
-//   width: 100%;
-// }
-
-
-
 
 // list CSS
 .list-wrap {
     justify-content: space-between;
+    padding: 5px !important;
+
 }
 .list-wrap ul{
     width: 100%;   
@@ -155,6 +198,8 @@
     align-items: center;
     height: 90vh;
     justify-content: space-between;
+    padding-left:15px;
+    padding-right:15px;
 }
 .about-content-wrap h1{
     margin-top: 10px;
@@ -168,7 +213,8 @@
 .about-content-wrap img {
     margin-top: -10px;
 }
-.about-content-wrap a {
+.about-content-wrap button {
+    background-color:transparent;
     border: 1px solid white;
     border-radius: 0;
     padding: 15px 25px;
@@ -176,14 +222,14 @@
     font-size: 1.1em;
     margin-bottom: 40px;
 }
-.about-content-wrap a:hover {
+.about-content-wrap button:hover {
     background: white;
     color: #333;
 }
 
 .facebook {
     position: absolute;
-    bottom:5%;
+    bottom:10%;
     right:5%;
     width: 100px;
     height: auto;
@@ -209,6 +255,27 @@
   width:100%; height:100%;
   object-fit: cover;
 }
+
+// gallery CSS
+.carousel-indicators {
+    top: 20px !important;
+}
+.carousel-caption {
+    top: 30px !important;
+}
+.carousel-caption h3{
+    font-weight: 400 !important;
+    text-shadow: 0 0 20px #000;
+}
+.carousel-caption p {
+    text-shadow: 0 0 20px #000; 
+}
+.carousel-icon {
+    width:70px;
+    height:70px;
+}
+
+
 @media (max-width: 767px){
     .member-last {
         margin:0 auto;
@@ -238,6 +305,9 @@
         height: 100vh;
     }
     .row > div {
+        height: 33%;
+    }
+    .row > div:nth-child(4),.row > div:nth-child(5),.row > div:nth-child(6){
         height: 34%;
     }
 }
@@ -338,21 +408,20 @@
         font-weight:400 !important;
     }
     .about-content-wrap img {
-        margin-top: -10px;
+        width:100px;
     }
-    .about-content-wrap a {
+    .about-content-wrap button {
         border: 1px solid white;
         border-radius: 0;
         padding: 10px 20px;
         color: white;
         font-size: 1.0em;
-        margin-bottom: 40px;
+        margin-bottom:0;
     }
-    .about-content-wrap a:hover {
+    .about-content-wrap button:hover {
         background: white;
         color: #333;
     }
-    
     //sponsor
     .sponsor-sub-title {
         margin-right: 0rem !important;
@@ -364,11 +433,7 @@
         text-align: center;
         margin-top: 30px;
     }
-    
-    .only-div {
-        height: 120px;
-    }
-    
+
     .facebook {
         position: absolute;
         bottom: 3%;
@@ -378,11 +443,26 @@
         text-align: right;
     }
     
-    .sponsor-img {
+    .sponsor-img, .service-img {
         display: inline-block;
-        width: 320px;
+        width: 300px;
         margin: 0;
-        padding: 30px;
+        padding: 20px;
+    }
+    .carousel-icon {
+         width:20px;
+         height:20px;
+    }
+    
+    // modal
+    .modal-title {
+        font-size: 1rem;
+    }
+    .modal-body img {
+        width: 100%;
+    }
+    .navbar-style {
+        padding: 5px;
     }
 
 }
@@ -434,10 +514,12 @@
   text-transform: uppercase;
   color: #fff;
   position: relative;
-  font-size: 17px;
+  font-size: 20px;
   background-color: transparent;
   padding: 15% 0 10px 0;
   text-align: left;
+  font-weight:400 !important;
+  text-shadow: 0 0 10px #333;
 }
 
 .hovereffect .overlay:before {
