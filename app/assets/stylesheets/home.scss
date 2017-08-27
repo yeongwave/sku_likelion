@@ -16,7 +16,7 @@
 //     filter: blur(6px);
 //     -webkit-filter: blur(6px);
 //     -moz-filter: blur(6px);
-//     -o-filter: blur(6px);    
+//     -o-filter: blur(6px);
 // }
 #main {
     position:relative;
@@ -158,10 +158,10 @@
 
 }
 .list-wrap ul{
-    width: 100%;   
+    width: 100%;
 }
 .list-wrap ul li{
-    width: 100%;  
+    width: 100%;
 }
 
 // about CSS
@@ -248,7 +248,7 @@
     height:100%;
 }
 .member-row {
-    height:100%;    
+    height:100%;
 }
 .member-img{
   display:block;
@@ -268,7 +268,7 @@
     text-shadow: 0 0 20px #000;
 }
 .carousel-caption p {
-    text-shadow: 0 0 20px #000; 
+    text-shadow: 0 0 20px #000;
 }
 .carousel-icon {
     width:70px;
@@ -280,7 +280,7 @@
     .member-last {
         margin:0 auto;
     }
-    
+
 }
 
 @media (max-width: 576px){
@@ -329,35 +329,35 @@
 //모바일 버전에서 보이는 모습
 @media (max-width: 767px) {
     //main
-    
+
     .main {
         padding: 0;
     }
-    
+
     .main-sub-title {
         font-size: 180%;
     }
-    
+
     .main-logo {
         margin: 0 0;
         text-align: center;
         padding-top: 50px;
     }
-    
+
     .main-logo img {
         width: 60%;
         height: auto;
     }
-    
+
     .main-logo-st {
         font-size: 250%;
     }
-    
+
     .main-hello {
         padding: 0;
         margin-top: 70px;
     }
-    
+
     .main-hello-st {
         margin: 0;
         text-align: center;
@@ -367,12 +367,12 @@
         margin:0 !important;
         justify-content: center;
     }
-    
+
     .about-img {
         width: 150px;
         height: auto;
     }
-    
+
     .about-content-background {
         position: relative;
         height: 100%;
@@ -428,7 +428,7 @@
         margin-left: 0rem !important;
         text-align: center;
     }
-    
+
     .sponsor-img-group {
         text-align: center;
         margin-top: 30px;
@@ -442,7 +442,7 @@
         height: auto;
         text-align: right;
     }
-    
+
     .sponsor-img, .service-img {
         display: inline-block;
         width: 300px;
@@ -453,7 +453,7 @@
          width:20px;
          height:20px;
     }
-    
+
     // modal
     .modal-title {
         font-size: 1rem;
@@ -561,4 +561,10 @@
   filter: alpha(opacity=100);
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+}
+
+@media (min-width: 576px){
+    .apply-modal-dialog {
+        max-width: 700px;
+    }
 }

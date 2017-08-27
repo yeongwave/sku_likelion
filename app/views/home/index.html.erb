@@ -4,7 +4,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    
+
       <div class="collapse navbar-collapse list-wrap" id="navbarSupportedContent">
         <ul class="navbar-nav text-center">
           <li class="nav-item">
@@ -61,7 +61,7 @@
         </button>
         <!-- Modal -->
         <div class="modal fade modal-div" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+          <div class="modal-dialog apply-modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">지원하기 전에 확인하세요 !</h4>
@@ -71,7 +71,8 @@
                 <img src="img/apply_notice.jpg" alt="지원시유의사항">
               </div>
               <div class="modal-footer">
-                <a href="https://docs.google.com/forms/d/1dazrJ3QTXpn-82ATFpGoEuNfqy-tUjL175wS2VFlpIk/edit" target="_blank" class="btn modal-btn">지원하기</a>
+                <!-- <a href="https://docs.google.com/forms/d/1dazrJ3QTXpn-82ATFpGoEuNfqy-tUjL175wS2VFlpIk/edit" target="_blank" class="btn modal-btn">지원하기</a> -->
+                <p target="_blank" class="btn modal-btn">9월 5일부터 지원 가능</p>
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
@@ -252,11 +253,11 @@
     </div>
 </section>
 <footer>
-  
+
 </footer>
 <script>
   $('.carousel').carousel()
-  
+
   $('.navbar-brand, .navbar-nav>li>a').on('click', function(){
       $('.navbar-collapse').collapse('hide');
   });
