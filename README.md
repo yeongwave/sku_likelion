@@ -9,3 +9,6 @@ SKU LIKELION 업데이트 내용
 -항목별 section 나누고 하단 메뉴 클릭시 자동 이동 구현 (지정 section으로 이동하면 navbar active 바뀝니다.)
 
 -이미지들은 경로 설정에 용이하게 사용하기 위해 "/app/assets/images"와 "/public/img" 두곳에 있습니다.
+
+
+seokhyun 브랜치 생성
